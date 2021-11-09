@@ -13,6 +13,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="dynamicColorThemeOverlay">@style/ThemeOverlay.App.DynamicColor</item>
+    </style>
+
+    <style name="ThemeOverlay.App.DynamicColor" parent="ThemeOverlay.Material3.DynamicColors.Dark">
+        <item name="elevationOverlayColor">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">@color/m3_appbar_overlay_color</item>
     </style>
 
     <!-- Частично динамическая тема -->
