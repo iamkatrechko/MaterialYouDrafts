@@ -9,18 +9,34 @@ class ChangeThemeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (isMdc3) {
+        if (themeMode == 1) {
             DynamicColors.applyIfAvailable(this)
+        } else if (themeMode == 2) {
+            DynamicColors.applyIfAvailable(this, R.style.Theme_MaterialYouDrafts_AllDynamic)
         }
         setContentView(R.layout.activity_change_theme)
-        findViewById<Button>(R.id.btn_change_theme).setOnClickListener {
-            isMdc3 = !isMdc3
+        findViewById<Button>(R.id.btn_change_theme_0).setOnClickListener {
+            themeMode = 0
+            recreate()
+        }
+        findViewById<Button>(R.id.btn_change_theme_1).setOnClickListener {
+            themeMode = 1
+            recreate()
+        }
+        findViewById<Button>(R.id.btn_change_theme_2).setOnClickListener {
+            themeMode = 2
             recreate()
         }
     }
 
     companion object {
 
-        private var isMdc3 = false
+        /**
+         * Режим темы
+         * 0 - стандартная
+         * 1 - стандартная полу-динамическая
+         * 2 - Material You
+         */
+        private var themeMode = 0
     }
 }

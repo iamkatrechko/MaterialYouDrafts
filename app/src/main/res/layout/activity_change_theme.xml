@@ -5,14 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ChangeThemeActivity"
     >
 
     <Button
-        android:id="@+id/btn_change_theme"
+        android:id="@+id/btn_change_theme_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Сменить тему"
+        android:text="Стандартная"
+        />
+
+    <Button
+        android:id="@+id/btn_change_theme_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Стандартная полу-динамическая"
+        />
+
+    <Button
+        android:id="@+id/btn_change_theme_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material You"
         />
 
 </LinearLayout>
